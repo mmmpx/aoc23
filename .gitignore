@@ -1,3 +1,5 @@
 **/Main
 **/*.hi
 **/*.o
+**/dist-newstyle
+**/bin
