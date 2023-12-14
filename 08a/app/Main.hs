@@ -47,6 +47,7 @@ next :: Node -> Direction -> HashMap Node (Node, Node) -> Node
 next src d h = (dir d) $ h ! src
 
 solve :: Node -> Node -> [Direction] -> HashMap Node (Node, Node) -> Int
+solve _ _ [] _ = error "no direction given"
 solve src dst (d:ds) h
   | src == dst = 0
   | otherwise = 1 + (solve (next src d h) dst ds h)
